@@ -45,19 +45,33 @@ class Cliente
       return $resultado;
     }
 
-    public function VacunarCliente($id,$nombre,$vacuna,$anio)
+    public function VacunarCliente($id,$vacuna,$anio)
     {
       $nuevaConexion = new conexion();
-      $nuevoComando = $nuevaConexion->Conectar();
-      $nuevoComando->query("Update mascotas set nombremascota  ="."'".$nombre."',nombrevacuna  ="."'".$vacuna."',nombreCliente ="."'".$anio."',prioridad ="."'".$prioridad ."'"." where idcliente = $id");
+      $ComandoConexion = $nuevaConexion->Conectar();
+
+      $idVacuna = $ComandoConexion -> real_escape_string($_POST["idClient"]);
+      $nomVacuna = $ComandoConexion -> real_escape_string($_POST["nomVacuna"]);
+      $anioVacuna = $ComandoConexion -> real_escape_string($_POST["anioVacuna"]);
+
+      $ComandoConexion = $nuevaConexion->Conectar();          
+      $ComandoConexion->query("insert into vacunas (nombrevacuna, aniovacuna, idmascota ) 
+      values ('$nomVacuna', '$anioVacuna', '$idVacuna')");
+      
+
+
+
     }
 
 
-    public function EliminarCliente($id,$proyecto,$asignado,$cliente,$prioridad)
+    public function ActualizarCliente($id,$mascota)
     {
       $nuevaConexion = new conexion();
-      $nuevoComando = $nuevaConexion->Conectar();
-      $nuevoComando->query("delete from clientes where idcliente=$id");      
+      $ComandoConexion = $nuevaConexion->Conectar();
+      $idMascota = $ComandoConexion -> real_escape_string($_POST["idClient"]);
+      $nomMascota = $ComandoConexion -> real_escape_string($_POST["nomMascota"]);
+
+      $ComandoConexion->query("update mascotas set nombremascota ='$nomMascota' where idmascota = $idMascota");      
     }
 
 }

@@ -21,15 +21,7 @@
                             {
                         ?>
                                 <p>
-                                <label> Mascota: <input type="text" name="nomMascota"  value="<?php echo $resultadoFiltrado['nombremascota']?>" required readonly = "readonly"></label>
-                                </p>
-
-                                <p>
-                                <label> Tipo de Vacuna: <input type="text"name="nomVacuna" required></label>
-                                </p>
-
-                                <p>
-                                <label> Año de vacunación: <input type="text"name="anioVacuna" required></label>
+                                <label> Mascota: <input type="text" name="nomMascota"  value="<?php echo $resultadoFiltrado['nombremascota']?>"></label>
                                 </p>
 
                                  <p>
@@ -40,7 +32,8 @@
                             }
                             ?>
                         
-                <input type="submit" value="Agregar Vacunas" name="btnVacunar">            
+                <input type="submit" value="Editar Nombre" name="btnRenombrar">        
+                <input type="submit" value="Cancelar" name="btnCancelar">     
     </form>
 </body>
 </html>

@@ -24,15 +24,16 @@ if(isset($_POST['btnGuardar']))
 /*EDITAR*/
 if(isset($_POST['btnVacunar']))
 {
- $nuevoCliente->VacunarCliente($_POST['idclient'],$_POST['nomMascota'],$_POST['nomVacuna'],$_POST['anioVacuna']); 
+ $nuevoCliente->VacunarCliente($_POST['idclient'],$_POST['nomVacuna'],$_POST['anioVacuna']); 
  header('Location: listaMascotas.php'); 
 }
 
-if(isset($_POST['btnVacunar']))
+
+
+if(isset($_POST['btnRenombrar']))
 {
- $nuevoCliente->EliminarCliente($_POST['idclient'],$_POST['txtnomProyecto'],$_POST['txtnomAsignado'],$_POST['txtnomCliente'],$_POST['multiSelect']); 
- header('Location: listaMascotas.php');
-        
+$nuevoCliente->ActualizarCliente($_POST['idclient'],$_POST['nomMascota']); 
+ header('Location: listaMascotas.php');       
 }
 
 if(isset($_POST['btnCancelar']))
