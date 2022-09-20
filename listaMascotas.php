@@ -24,7 +24,7 @@
 
     <h2>Lista de Mascotas</h2>
     <p>Diego Samayoa - Prueba PARCIAL II</p>
-    <h2>TABLAS EN MYSQL (Online)</h2>
+    <h2>TABLAS EN MYSQL</h2>
 
     <table class="table table-striped w-50 pb-3">
     
