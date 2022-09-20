@@ -22,13 +22,11 @@ if(isset($_POST['btnGuardar']))
 
 
 /*EDITAR*/
-if(isset($_POST['btnEditar']))
+if(isset($_POST['btnVacunar']))
 {
- $nuevoCliente->EditarCliente($_POST['idclient'],$_POST['txtnomProyecto'],$_POST['txtnomAsignado'],$_POST['txtnomCliente'],$_POST['multiSelect']); 
- header('Location: listaMascotas.php');
-        
+ $nuevoCliente->VacunarCliente($_POST['idclient'],$_POST['nomMascota'],$_POST['nomVacuna'],$_POST['anioVacuna']); 
+ header('Location: listaMascotas.php'); 
 }
-
 
 if(isset($_POST['btnVacunar']))
 {

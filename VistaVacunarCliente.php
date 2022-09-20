@@ -21,15 +21,15 @@
                             {
                         ?>
                                 <p>
-                                <label> Mascota: <input type="text" name="nomMascota"  value="<?php echo $resultadoFiltrado['nomMascota']?>" required></label>
+                                <label> Mascota: <input type="text" name="nomMascota"  value="<?php echo $resultadoFiltrado['nombremascota']?>" required readonly = "readonly"></label>
                                 </p>
 
                                 <p>
-                                <label><input type="text"name="nomVacuna" required></label>
+                                <label>Tipo de Vacuna: <input type="text"name="nomVacuna" required></label>
                                 </p>
 
                                 <p>
-                                <label><input type="text"name="anioVacuna" required></label>
+                                <label>Año de vacunación: <input type="text"name="anioVacuna" required></label>
                                 </p>
 
                                  <p>

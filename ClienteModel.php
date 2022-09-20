@@ -45,11 +45,11 @@ class Cliente
       return $resultado;
     }
 
-    public function EditarCliente($id,$nombre,$vacuna,$anio)
+    public function VacunarCliente($id,$nombre,$vacuna,$anio)
     {
       $nuevaConexion = new conexion();
       $nuevoComando = $nuevaConexion->Conectar();
-      $nuevoComando->query("Update clientes set nombreProyecto ="."'".$nombre."',nombreAsignado ="."'".$vacuna."',nombreCliente ="."'".$anio."',prioridad ="."'".$prioridad ."'"." where idcliente = $id");
+      $nuevoComando->query("Update mascotas set nombremascota  ="."'".$nombre."',nombrevacuna  ="."'".$vacuna."',nombreCliente ="."'".$anio."',prioridad ="."'".$prioridad ."'"." where idcliente = $id");
     }
 
 
