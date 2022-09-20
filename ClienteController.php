@@ -41,5 +41,6 @@ if(isset($_POST['btnCancelar']))
  header('Location: listaMascotas.php');        
 }
 
+?>
 
 
